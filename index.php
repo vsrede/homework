@@ -1,33 +1,21 @@
 <?php
-
-  
-  
   class MyFirst
-
   {
-    public $arr;
-    public $sum ;
-    function __construct(array $arr) {
+      public $arr;
+      function __construct(array $arr) {
         $this->arr = $arr;
-        $this->$sum;
-     }
-    public function sumMyArr(){
-        $sum = 0; 
-        foreach ($MyArray1 as $value)
-        $sum += $value; 
-        return $sum ;  
-    }
-
-  }
-
-  $sum=0;  
+      }
+      public function myInArr ($a) {
+        foreach ($this->arr as $value) {
+          if ($a===$value) {
+            return 'TRUE';
+          }
+        }
+      }
+  } 
   $arr = [1,2,3,4,5,6,7,8];
+  $a = 3;
   $MyArray1 = new MyFirst ($arr);
-  echo $MyArray1->SunMyArr();
-
+  echo $MyArray1->myInArr($a);
 ?>
   
-
-
-
-
