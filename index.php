@@ -8,7 +8,7 @@
       public function myInArr ($a) {
         foreach ($this->arr as $value) {
           if ($a===$value) {
-            return 'TRUE';
+            return "TRUE";
           }
         }
       }
