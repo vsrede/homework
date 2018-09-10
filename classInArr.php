@@ -2,9 +2,10 @@
   class MyFirst
   {
       public $arr;
-      public $a=5;
+      public $a;
       function __construct( array $arr ) {
         $this->arr = $arr;
+        $this->a = 3;
         }
       public function myInArr(){
         foreach ( $this->arr as $value ) {
