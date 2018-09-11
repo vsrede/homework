@@ -1,39 +1,24 @@
 <?php
-  class MyArrClass
-  {
+  class MyArrClass {
     public $arr1;
-    public $arr2;
-    function __construct ( $arr1 )
-    {
+    function __construct ( $arr1 ) {
       $this->arr1 = $arr1;
     }
     public function myCount() {
-    $count = count($this->arr1); 
-    return $count;
+      $count = count($this->arr1); 
+      return $count;
     }
-      public function myArrayDiff () {
-
-        for ( $i=0;$i<$count;$i++){
-          if (!in_array($this->arr, $arr2)) {
-            return $this->arr[$i];
-          }
+    public function myArrayDiff($arr2=['монахиня','php',6667,3]){
+      foreach ($this->arr1 as $value) {
+        if (!in_array($value,$arr2 )) {
+          return $value;
+        }
       }
-      }
+    }
   }
   $arr1=['монахиня','php',666,3];
   $MyArray1 = new MyArrClass($arr1);
-  $arr2=['монахиня','php',6667,3];
   echo $MyArray1->myCount($MyArray1) ;
   var_dump($MyArray1);
-  var_dump($arr2);
-  echo myArrayDiff();
-?>   
-       
-     
-    
-
- 
-      
-  
- 
-  
+  echo $MyArray1->myArrayDiff();
+?> 
