@@ -1,0 +1,33 @@
+<?php
+  class Bubble
+  {
+    public $arr;
+    public $count;
+    public $unsort;
+    public $temp;
+    function __construct(array $arr)
+    {
+      $this -> arr = $arr;
+    }
+    public function myCounter(){
+      $count =count ( $this->arr ) ;
+      return $count;
+    }
+    public function mySort(){
+      $unsort=true;
+      while ($unsort) {
+        $unsort = false;
+        for ($i=0; $i < $this->myCounter(); $i++) { 
+             $temp = $this->arr[$i];
+             $this->arr[$i] =  $this->arr[$i+1];
+             $this->arr[$i+1] = $temp;
+             $unsort = true;
+        }
+      }
+    }
+  }
+  $arr = [2,9,5,6,4,7,1];
+  $MyArray = new Bubble($arr);
+  $count;
+  echo $MyArray->myCounter($MyArray);
+  echo $MyArray->mySort($MyArray);
