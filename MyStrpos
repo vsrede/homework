@@ -1,5 +1,5 @@
 <?php
-	Class MyString
+	class MyString
 	{
 		public $pos;
 		function __construct ($str)
