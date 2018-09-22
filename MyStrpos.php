@@ -1,21 +1,23 @@
 <?php
-	class MyString
-	{
-		public $pos;
-		function __construct ($str)
-		{
-			$this->str = $str;
-		}
-		public function findStr()
-		{
-			for ( $i=0; $i < strlen($this->str) ; $i++) { 
-				if ( $pos==$this->str[$i] ) {
-					return $i;	
-				}
-			}
-		}
-	}
-	$str = "Kakao";
-	$pos ='b';
-	$MyStr = new MyString($str);
-	echo $MyStr->findStr();
+    class MyString
+    {
+        public $search;
+        public $result;
+        function __construct ($MyStr = 'Tower')
+        {
+            $this->MyStr = $MyStr;
+        }
+        public function findStr()
+        {
+            for ( $i=0; $i < strlen($this->MyStr) ; $i++) { 
+                if ( $this->MyStr[$i] === $search ) {
+                     $result = $i;
+                }
+               return $result;
+            }
+        }
+    }
+    $search = 'o';
+    $MyStr = 'Tower';
+    $MyStr = new MyString;
+    echo $MyStr->findStr($MyStr);
