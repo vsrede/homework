@@ -9,7 +9,7 @@
         }
         public function findStr()
         {
-            for ( $i=0; $i < strlen($this->MyStr) ; $i++) { 
+            for ($i=0; $i < strlen($this->MyStr); $i++) { 
                 if ( $this->MyStr[$i] === $search ) {
                      $result = $i;
                 }
