@@ -19,4 +19,4 @@
     }
     $firstStr = 'i love it';
     $firstStr = new MySubstr;
-    echo $firstStr->mySubstrFunc($firstArr);
+    echo $firstStr->mySubstrFunc();
